@@ -31,12 +31,15 @@
         }
         .nav-bar {
             width: 100%;
-            padding: 20px 0;
+            padding: 20px 180px;
             display: flex;
             justify-content: flex-start;
             align-items: center;
             z-index: 1000;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            /* background-color: white; */
+            /* opacity: 0.5; */
         }
         .nav-bar a {
             margin-left: 15px;
@@ -58,9 +61,19 @@
         .slideshow-container {
             width: 90%;
             max-width: 1200px;
-            margin: 150px auto 50px auto;
+            margin: 100px auto 50px auto;
             padding: 40px;
             border-radius: 20px;
+            /* background: rgba(255, 255, 255, 0.9); */
+            /* box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); */
+            /* backdrop-filter: blur(10px); */
+        }
+        .introduction{
+            margin: auto;
+            padding: 100px;
+            border-radius: 500px;
+            height: 500px;
+            width: 500px;
             background: rgba(255, 255, 255, 0.9);
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
             backdrop-filter: blur(10px);
@@ -245,15 +258,13 @@
 <body>
     <div id="particles-js"></div>
     <div class="nav-bar">
-        <a href="#home">SICA</a>
+        <a href="index.html">SICA</a>
         <span class="nav-link" onclick="currentSlide(0)">Work</span>
         <span class="nav-link" onclick="currentSlide(1)">Experience & Skills</span>
     </div>
     <div class="slideshow-container">
         <div class="section active" id="home">
-            <div
-
- class="introduction">
+            <div class="introduction">
                 <h1 class="section-title">Hi I'm Jessica</h1>
                 <p class="bio">UI/UX designer and developer passionate about creating clean and user-friendly interfaces.</p>
                 <div class="contact-links">
