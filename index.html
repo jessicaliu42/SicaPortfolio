@@ -38,8 +38,8 @@
             z-index: 1000;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             position: fixed;
-            /* background-color: white; */
-            /* opacity: 0.5; */
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
         }
         .nav-bar a {
             margin-left: 15px;
@@ -47,6 +47,10 @@
             color: #4a4a4a; /* Morandi dark gray */
             text-decoration: none;
             transition: color 0.3s ease;
+        }
+        .nav-bar img{
+            width: 40px;
+            height: 40px;
         }
         .nav-bar span {
             cursor: pointer;
@@ -100,10 +104,12 @@
             font-weight: 500;
         }
         h3 {
+            padding: 20px 0;
             font-size: 1.5em;
             font-weight: 500;
         }
         .section-title {
+            padding-top: 50px;
             border-bottom: 2px solid #d2a679; /* Morandi gold */
             padding-bottom: 10px;
             margin-bottom: 30px;
@@ -258,7 +264,7 @@
 <body>
     <div id="particles-js"></div>
     <div class="nav-bar">
-        <a href="index.html">SICA</a>
+        <a href="index.html"><img src="/sica.png"></a>
         <span class="nav-link" onclick="currentSlide(0)">Work</span>
         <span class="nav-link" onclick="currentSlide(1)">Experience & Skills</span>
     </div>
