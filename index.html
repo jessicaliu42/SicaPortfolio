@@ -31,7 +31,7 @@
         }
         .nav-bar {
             width: 100%;
-            padding: 20px 12%;
+            padding: 20px 15%;
             display: flex;
             justify-content: flex-start;
             align-items: center;
@@ -77,10 +77,11 @@
             padding: 100px;
             border-radius: 500px;
             height: 500px; */
-            max-width: 500px;
+            /* max-width: 500px; */
             /* background: rgba(255, 255, 255, 0.9);
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
             backdrop-filter: blur(10px); */
+            text-align: left;
         }
         .section {
             width: 100%;
@@ -139,7 +140,7 @@
             color: #fff;
         }
         .cta-button {
-            display: inline-block;
+            display: block;
             width: 240px;
             margin: 20px auto;
             padding: 15px 30px;
@@ -273,19 +274,20 @@
 <body>
     <div id="particles-js"></div>
     <div class="nav-bar">
-        <a href="index.html"><img src="/sica.png"></a>
+        <a href="index.html"><img src="sica.png"></a>
         <span class="nav-link" onclick="currentSlide(0)">Work</span>
         <span class="nav-link" onclick="currentSlide(1)">Experience & Skills</span>
+        <span class="nav-link" href="mailto:63280ster@gmail.com">Contact</span>
     </div>
     <div class="slideshow-container">
         <div class="section active" id="home">
             <div class="introduction">
                 <h1 class="section-title">Hi I'm Jessica</h1>
                 <p class="bio">As a UI/UX designer and developer, I am passionate about creating clean, user-friendly interfaces that enhance user experiences. My focus is on blending aesthetic design with functional usability to deliver seamless and intuitive interactions. In addition to my design and development expertise, I possess strong teaching skills, enabling me to effectively communicate complex concepts and mentor others in the field. With a keen eye for detail and a commitment to continuous improvement, I strive to develop solutions that meet users’ needs and exceed their expectations.</p>
-
-                <div class="contact-links">
+                <p class="bio">Social Media: LinkIn, Email</p>
+                <!-- <div class="contact-links">
                     <a href="mailto:jessica@example.com" class="cta-button">Email Me</a>
-                </div>
+                </div> -->
             </div>
             <div id="projects">
                 <h2 class="section-title">Projects</h2>
