@@ -21,6 +21,14 @@
             transition: background 0.5s ease;
             overflow: auto;
         }
+        /* Morandi Color Palette */
+        :root {
+            --morandi-dark-gray: #4a4a4a;
+            --morandi-gold: #d2a679;
+            --morandi-darker-gold: #b8905f;
+            --morandi-light-gray: #ece2d0;
+            --morandi-mid-gray: #cfc8bc;
+        }
         #particles-js {
             position: fixed;
             width: 100%;
@@ -30,41 +38,44 @@
             z-index: -1;
         }
         .nav-bar {
-            width: 90%;
-            max-width: 1200px;
-            margin: 20px auto;
+            width: 100%;
+            padding: 20px 15%;
             display: flex;
             justify-content: flex-start;
             align-items: center;
             z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
         }
         .nav-bar a {
             margin-left: 15px;
             font-weight: 700;
-            color: #4a4a4a; /* Morandi dark gray */
+            color: var(--morandi-dark-gray);
             text-decoration: none;
             transition: color 0.3s ease;
         }
+        .nav-bar img {
+            width: 40px;
+            height: 40px;
+        }
         .nav-bar span {
             cursor: pointer;
-            margin-left: 30px; /* Increased space between SICA and Work */
+            margin-left: 30px; /* Increased space between SICA and Home */
             font-weight: 500;
-            color: #4a4a4a; /* Morandi dark gray */
+            color: var(--morandi-dark-gray);
             transition: color 0.3s ease;
         }
-        .nav-bar a:hover, .nav-bar span:hover {
-            color: #d2a679; /* Morandi gold */
+        .nav-bar a:hover, .nav-bar span:hover, .nav-bar .active-text {
+            color: var(--morandi-gold);
         }
         .container {
             width: 90%;
             max-width: 1200px;
-            margin: 150px auto 50px auto;
+            margin: 100px auto 50px auto;
             padding: 40px;
             border-radius: 20px;
-            background: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(10px);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .card {
             padding: 40px;
@@ -80,8 +91,8 @@
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
         }
         h1, h2, h3 {
-            color: #4a4a4a; /* Morandi dark gray */
-            text-align: center;
+            color: var(--morandi-dark-gray);
+            text-align: left;
             margin-bottom: 20px;
         }
         h1 {
@@ -97,14 +108,14 @@
             font-weight: 500;
         }
         .section-title {
-            border-bottom: 2px solid #d2a679; /* Morandi gold */
+            border-bottom: 2px solid var(--morandi-gold);
             padding-bottom: 10px;
             margin-bottom: 30px;
             font-size: 1.8em;
             font-weight: 500;
         }
         p {
-            color: #4a4a4a; /* Morandi dark gray */
+            color: var(--morandi-dark-gray);
             margin-bottom: 20px;
             font-size: 1.2em;
             font-weight: 300;
@@ -131,13 +142,13 @@
             padding: 20px;
             font-size: 1.3em;
             font-weight: bold;
-            background: linear-gradient(to right, #d2a679, #b8905f); /* Gradient for headers */
+            background: linear-gradient(to right, var(--morandi-gold), var(--morandi-darker-gold));
             color: white;
             border-radius: 10px;
             transition: background-color 0.3s ease;
         }
         .accordion-header:hover {
-            background: linear-gradient(to right, #b8905f, #d2a679); /* Darker gradient on hover */
+            background: linear-gradient(to right, var(--morandi-darker-gold), var(--morandi-gold));
         }
         .accordion-content {
             display: none;
@@ -157,11 +168,13 @@
 <body>
     <div id="particles-js"></div>
     <div class="nav-bar">
-        <a href="#home">SICA</a>
-        <span class="nav-link" onclick="scrollToSection('case-study')">Work</span>
+        <a href="index.html"><img src="/sica.png"></a>
+        <span class="nav-link" onclick="currentSlide(0)">Work</span>
+        <span class="nav-link" onclick="currentSlide(1)">Experience & Skills</span>
+        <span class="nav-link"><a href="mailto:63280ster@gmail.com" target="_blank">Contact</a></span>
     </div>
     <div class="container" id="case-study">
-        <div class="card">
+        <div>
             <h1 class="section-title">Rescue Me Georgia Website Redesign</h1>
             <h2>Introduction</h2>
             <p>We revamped the website for Rescue Me Georgia, a local non-profit animal rescue organization. Our primary objectives were to enhance first-time visitors’ user experience, make it easier for adopters to find information swiftly, and refresh Rescue Me Georgia's logo.</p>
@@ -235,7 +248,7 @@
                     },
                     "move": {
                         "enable": true,
-                        "speed": 3, /* Slower speed for particles */
+                        "speed": 3,
                         "direction": "none",
                         "random": false,
                         "straight": false,
