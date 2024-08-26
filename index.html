@@ -29,6 +29,10 @@
             left: 0;
             z-index: -1;
         }
+        .bio img{
+            width: 30px;
+            height: 30px;
+        }
         .nav-bar {
             width: 100%;
             padding: 20px 15%;
@@ -214,6 +218,7 @@
         .accordion-content.open {
             display: block;
         }
+      
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -269,6 +274,35 @@
             font-size: 1em;
             font-weight: 300;
         }
+        .skills{
+        }
+        .skills li{
+            overflow: hidden;
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .icon{
+            width: 50px;
+            height: 50px;
+        }
+        .text{
+            display: inline;
+            margin: auto;
+            padding: 0px 50px;
+            font-size: larger;
+            font-weight: 500;
+        }
+         /* Media queries */
+         @media (max-width: 768px) {
+            .project-card {
+            flex: auto; 
+            /* Responsive design */
+        }
+        }
+        /* Responsive typography */
+        @media (min-width: 768px) {
+        }
     </style>
 </head>
 <body>
@@ -284,7 +318,7 @@
             <div class="introduction">
                 <h1 class="section-title">Hi I'm Jessica</h1>
                 <p class="bio">As a UI/UX designer and developer, I am passionate about creating clean, user-friendly interfaces that enhance user experiences. My focus is on blending aesthetic design with functional usability to deliver seamless and intuitive interactions. In addition to my design and development expertise, I possess strong teaching skills, enabling me to effectively communicate complex concepts and mentor others in the field. With a keen eye for detail and a commitment to continuous improvement, I strive to develop solutions that meet users’ needs and exceed their expectations.</p>
-                <p class="bio">Social Media: LinkIn, Email</p>
+                <p class="bio"><a href="mailto:63280ster@gmail.com" target="_blank"><img src="email.png"></a></p>
                 <!-- <div class="contact-links">
                     <a href="mailto:jessica@example.com" class="cta-button">Email Me</a>
                 </div> -->
@@ -347,6 +381,58 @@
                         </div>
                     </a>
                 </div>
+                <div class="projects-container">
+                    <a href="https://topic.cw.com.tw/2018watershed/story.html" class="project-card" target="_blank">
+                        <img src="00.png" alt="Project D">
+                        <div class="project-content">
+                            <div class="project-date">2018</div>
+                            <div class="project-title">CSS, HTML, JavaScript</div>
+                            <!-- <div class="project-description">Description of Project D. Key features and technologies used.</div> -->
+                        </div>
+                    </a>
+                    <a href="https://topic.cw.com.tw/politicaldynasty2018/" class="project-card" target="_blank">
+                        <img src="01.png" alt="Project E">
+                        <div class="project-content">
+                            <div class="project-date">2018</div>
+                            <div class="project-title">CSS, HTML, JavaScript</div>
+                            <!-- <div class="project-description">Description of Project E. Key features and technologies used.</div> -->
+                        </div>
+                    </a>
+                    <a href="https://topic.cw.com.tw/2017Asean/" class="project-card" target="_blank">
+                        <img src="02.png" alt="Project F">
+                        <div class="project-content">
+                            <div class="project-date">2018</div>
+                            <div class="project-title">CSS, HTML, JavaScript</div>
+                            <!-- <div class="project-description">Description of Project F. Key features and technologies used.</div> -->
+                        </div>
+                    </a>
+                </div>
+                <div class="projects-container">
+                    <a href="https://topic.cw.com.tw/2018watershed/story.html" class="project-card" target="_blank">
+                        <img src="00.png" alt="Project D">
+                        <div class="project-content">
+                            <div class="project-date">2018</div>
+                            <div class="project-title">CSS, HTML, JavaScript</div>
+                            <!-- <div class="project-description">Description of Project D. Key features and technologies used.</div> -->
+                        </div>
+                    </a>
+                    <a href="https://topic.cw.com.tw/politicaldynasty2018/" class="project-card" target="_blank">
+                        <img src="01.png" alt="Project E">
+                        <div class="project-content">
+                            <div class="project-date">2018</div>
+                            <div class="project-title">CSS, HTML, JavaScript</div>
+                            <!-- <div class="project-description">Description of Project E. Key features and technologies used.</div> -->
+                        </div>
+                    </a>
+                    <a href="https://topic.cw.com.tw/2017Asean/" class="project-card" target="_blank">
+                        <img src="02.png" alt="Project F">
+                        <div class="project-content">
+                            <div class="project-date">2018</div>
+                            <div class="project-title">CSS, HTML, JavaScript</div>
+                            <!-- <div class="project-description">Description of Project F. Key features and technologies used.</div> -->
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
         <div class="section" id="experience-skills">
@@ -360,14 +446,40 @@
                         <div class="accordion-content open">
                             <ul>
                                 <li>
-                                    <strong>UI/UX Designer at ABC Corp</strong> <br>
-                                    Jan 2020 - Present <br>
-                                    Worked on various design projects, creating user-friendly interfaces and enhancing user experiences.
+                                    <strong>Teaching Assistance for UX/UI at Georgia Tech (Part-Time) 2U, Inc (Remote)</strong> <br>
+                                    Nov 2022 - Jun 2023 <br>
+                                    •	Coordinated and managed a virtual class of 60 students, supporting the lead instructor.<br>
+                                    •	Graded assignments with detailed feedback to enhance UX/UI research and coding skills.<br>
+                                    •	Guided students through complex concepts using Slack and Zoom.<br>
+                                    •	Fostered a positive learning environment, encouraging struggling students.<br>
                                 </li>
                                 <li>
-                                    <strong>Front-end Developer at XYZ Ltd</strong> <br>
-                                    Jun 2016 - Dec 2019 <br>
-                                    Developed responsive web applications and collaborated with designers to implement UI features.
+                                    <strong>Computer Programming Instructor (Part-Time) at The Coder School</strong> <br>
+                                    Nov 2022 - Mar 2023 <br>
+                                    •	Taught Scratch and Minecraft Scratch to students aged 7+ through personalized and group lessons.<br>
+                                    •	Developed an engaging, age-appropriate block-coding game development curriculum.
+                                </li>
+                                <li>
+                                    <strong>Coding Online Instructor(Part-Time) at Nucamp(Remote)</strong>
+                                    <br>
+                                    Feb 2020 - Mar 2020 <br>
+                                    •	Led online courses in HTML, CSS, and JavaScript for a cohort of 20 students.<br>
+                                    •	Provided prompt, constructive feedback to improve student skills.
+                                </li>
+                                <li>
+                                    <strong>Front End UI Developer (Contractor) at OtoSense (acquired by Analog Devices in 2017)</strong><br>
+                                    April 2019 - Nov 2019<br>
+                                    •	Designed and implemented UI components with React.js, TypeScript, and MobX in a team of 4 developers.<br>
+                                    •	Created reusable, responsive UI elements for a consistent user experience.
+                                </li>
+                                <li>
+                                    <strong>Front End UI Engineer at CommonWealth Magazine Group</strong>
+                                    <br>
+                                    Jan 2014 - Jun 2018<br>
+                                    •	Developed user-centric UX/UI and front-end features for 30+ landing pages using JavaScript, jQuery, C#, MySQL, D3.js, Map API, Canvas, and Facebook API in a team of 3-5 members.<br>
+                                    •	Led JavaScript and GitHub courses for digital designers, teaching essential coding and version control skills.<br>
+                                    •	Designed wireframes and layouts for an iOS/Android magazine app using Sketch, ensuring intuitive user experiences.<br>
+                                    •	Animated infographic content with After Effects, collaborating with a 2D artist and digital editor from storyboarding to final production.
                                 </li>
                             </ul>
                         </div>
@@ -377,12 +489,12 @@
                             Skills
                         </div>
                         <div class="accordion-content open">
-                            <ul>
-                                <li>UI/UX Design</li>
-                                <li>HTML & CSS</li>
-                                <li>JavaScript</li>
-                                <li>React</li>
-                                <li>Adobe Creative Suite</li>
+                            <ul class="skills">
+                                <li><img class="icon" src="web-design.png"><p class="text">UI/UX Design</p></li>
+                                <li><img class="icon" src="experience.png"><p class="text">UI/UX Research</p></li>
+                                <li><img class="icon" src="website-layout.png"><p class="text">Web Coding</p></li>
+                                <li><img class="icon" src="animation.png"><p class="text">Animation</p></li>
+                                <li><img class="icon" src="pen-tablet.png"><p class="text">Illustration</p></li>
                             </ul>
                         </div>
                     </div>
